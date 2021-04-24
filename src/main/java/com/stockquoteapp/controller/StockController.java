@@ -31,7 +31,7 @@ public class StockController {
 	
 	@PostMapping(value = "/stock")
 	@ResponseStatus(value = HttpStatus.CREATED)
-	public Stock createStock(@Validated @RequestBody Stock stock) {
+	public Stock createStock(@RequestBody Stock stock) {
 		
 		return stockRepository.save(stock);
 	}
